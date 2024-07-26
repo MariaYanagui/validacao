@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Email</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='email.css'>
+</head>
+<body>
+    <form action="" name="frmEnvia" onsubmit="return (verifica())">
+        <label for="">Email</label>
+        <input type="text" name="email" onblur="checarEmail()"> <br>
+        <input type="submit" value="ENVIAR">
+    </form>
+    <div id="email"></div>
+
+    <script src='email.js'></script>
+    <style>
+        body {
+    background-color: #eee0b7;
+}
+h1 {
+    margin-left: 43%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o formulário */
+form {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #dc3545; /* vermelho */
+    border-radius: 5px;
+    width: 300px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 41%;
+}
+
+/* Estilo para os rótulos */
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #dc3545; /* vermelho */
+}
+
+/* Estilo para os inputs */
+input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #dc3545; /* vermelho */
+    border-radius: 3px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #c82333; /* vermelho mais escuro ao focar */
+    outline: none;
+}
+
+/* Estilo para o botão */
+button[type="submit"] {
+    background-color: #dc3545; /* vermelho */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #c82333; /* vermelho mais escuro ao passar o mouse */
+}
+
+/* Estilo para a mensagem de validação */
+#message {
+    margin-left: 30%;
+    font-size: 14px;
+    color: #dc3545; /* vermelho */
+}
+    </style>
+</body>
+</html>
